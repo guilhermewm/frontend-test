@@ -1,0 +1,6 @@
+<section class="movies-list">
+    <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+    <app-errors *ngIf="!loading && error" [error]="error"></app-errors>
+</section>
+<app-loader *ngIf="!error && loading"></app-loader>
+<button (click)="loadMovies()">load more</button>
