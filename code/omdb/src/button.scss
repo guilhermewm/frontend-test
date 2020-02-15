@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+button {
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    color: $color-white;
+    font-size: $text-regular;
+    transition-duration: 0.4s;
+    border: 2px solid $color-mid-grey;
+}
+
+button:hover {
+    background-color: $color-secondary;
+}
+
+.btn-active {
+    background-color: $color-active;
+}
+
+.btn-disable {
+    background-color: $color-disabled;
+    cursor: not-allowed;
+}
