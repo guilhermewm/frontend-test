@@ -1,0 +1,10 @@
+@import "./variables.scss";
+@import "./button.scss";
+
+body {
+    font-family: $roboto;
+    min-width: 418px;    
+    background: $color-default;
+    padding-bottom: $large;
+    margin: 0px;
+}
