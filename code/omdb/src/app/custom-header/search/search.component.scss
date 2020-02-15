@@ -1,0 +1,27 @@
+@import '../../../variables.scss';
+
+.search-container {
+    float: right;
+    
+        @media (max-width: 648px) {
+            > input {
+                width: 15em !important;
+            }
+        }
+
+        > input {
+            width: 20em;
+            border-radius: 3px;
+            padding: $x-small;
+            margin-top: $x-small;
+            font-size: $text-regular;
+            border: 1px solid $color-light-grey;
+        }
+}
+
+@media (max-width: 648px) {
+    .search-container {
+        float: unset;
+    }
+}
+

@@ -1,0 +1,9 @@
+<div class="search-container">
+    <i class="fa fa-search"></i>
+    <input
+        type="te" 
+        placeholder="Search movie´s title..." 
+        autofocus
+        (keyup)="debounce.next($event.target.value)"
+    >
+</div>
