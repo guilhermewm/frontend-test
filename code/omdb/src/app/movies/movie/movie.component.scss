@@ -1,0 +1,37 @@
+@import '../../../variables.scss';
+
+.movie {
+    > .title {
+        font-size: $text-regular;
+        padding: 15px 8px 15px 8px;
+        color: $color-white;
+        background-color: $color-secondary;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    > .content {
+        padding: 5px 5px 2px 5px;
+        background: $color-mid-grey;
+        border-radius: 0px 0px 5px 5px;   
+        text-align: center;
+    }
+}
+
+// .movie:hover{
+//     animation: zoom 2s ease;
+//     z-index: 9999;
+//     position: absolute;
+//     width: 100%;
+// }
+
+// @keyframes zoom {
+//     0% { 
+//         width: 310px;        
+//     }
+//     100% {
+//         margin-left: -23px;
+//         padding-left: -23px;
+//         width: 100%;
+        
+//     }
+// }

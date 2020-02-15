@@ -1,0 +1,6 @@
+<div class="movie" (click)="teste($event)">
+    <div class="title"> {{movie.Title}} </div>
+    <div class="content"> 
+        <img src="{{(movie.Poster === 'N/A' ? '../../../../../../assets/image-not-found.png' : movie.Poster)}}"/>
+    </div>
+</div>
