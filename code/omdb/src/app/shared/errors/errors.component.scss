@@ -1,0 +1,19 @@
+@import '../../../variables.scss';
+
+.error-component {
+    max-width: 320px; 
+    min-width: 300px;
+    padding-top: $large;
+
+    > div {
+        > div {
+            font-size: $text-medium;
+            color: $color-grey;
+        }
+
+        > p {
+            font-size: $text-regular;
+            color: $color-mid-grey;
+        }
+    }
+}
