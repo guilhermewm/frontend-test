@@ -1,0 +1,16 @@
+@import "../shared/styles/variables.scss";
+
+.not-found-component {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    padding-top: 20%;
+
+    > .title {
+        font-size: $text-bold;
+    } 
+
+    > .message {
+        font-size: $text-medium;
+    }
+}
