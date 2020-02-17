@@ -1,6 +1,26 @@
-@import "../../variables.scss";
+@import "../shared/styles/variables.scss";
 
 .home-style {
     width: 100%;
     height: 100%;
+
+    > app-movie-detail {
+        animation: slide-up 1s ease;
+    }
+
+    > .div-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    @keyframes slide-up {
+        0% {
+            visibility: none;
+            transform: translateY(100px);
+        }
+        100% {
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
 }

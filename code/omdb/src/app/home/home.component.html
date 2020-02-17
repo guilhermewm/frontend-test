@@ -1,7 +1,10 @@
-<div class="home-style">
+<section class="home-style">
     <app-custom-header></app-custom-header>
-    <app-movies-list></app-movies-list>
-    <!-- <section style="width: 100%; text-align: center;">        
-        <button class="btn-active">Load more</button>
-    </section> -->
-</div>
+    <app-movies-list *ngIf="!movieDetail" [movies]="movies" (movieSelected)="movieSelected($event)"></app-movies-list>
+    <app-errors *ngIf="!loading && error && !movieDetail" [error]="error"></app-errors>
+    <ngx-loading [show]="!error && loading && !movieDetail" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+    <app-movie-detail *ngIf="movieDetail" [movie]="movieDetail"></app-movie-detail>
+    <div class="div-button" *ngIf="!movieDetail && buttonActive && movies.length" >
+        <button class="btn-active" (click)="loadMovies()">load more</button>
+    </div>    
+</section>
