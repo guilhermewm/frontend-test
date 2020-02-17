@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from 'src/app/model/movie';
-import {Location} from '@angular/common'; 
+import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
 
 @Component({
   selector: 'app-movie',
@@ -8,14 +8,10 @@ import {Location} from '@angular/common';
   styleUrls: ['./movie.component.scss']
 })
 export class MovieComponent implements OnInit {
-  @Input() movie: Movie;
+  @Input() movie: Movie = {} as Movie;
 
-  constructor(private location: Location) { }
+  constructor() { }
 
-  teste(ev) {
-    console.log(ev);
-    this.location.replaceState("/some/newstate/");
-  }
   ngOnInit(): void {
   }
 
