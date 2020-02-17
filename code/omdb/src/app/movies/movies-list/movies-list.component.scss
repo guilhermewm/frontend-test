@@ -1,38 +1,39 @@
-@import '../../../variables.scss';
+@import '../../shared/styles/variables.scss';
 
 .movies-list {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: $large 5px $large 5px;
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: $large 5px $large 5px;
 
-    > app-movie {
-        margin: 5px 10px 5px 10px;
-        flex-grow: 1;
-        width: 310px;
-        max-width: 310px;
-        display: table;
-        border-radius: 5px;
-        opacity: 0.9;
-        transition: opacity 0.3s linear;
-        animation: slide-left 0.3s ease;
-    }
-    
-    > app-movie:hover {
-        box-shadow: 0 0 10px;
-        opacity: 1;
-    }
-    
-    @keyframes slide-left {
-        0% {
-            opacity: 0;
-            transform: translateX(100px);
-        }
-        100% {
+        > app-movie {
+            margin: 5px 10px 5px 10px !important;
+            flex-grow: 1;
+            width: 310px;
+            max-width: 310px;
+            display: table;
+            border-radius: 5px;
             opacity: 0.9;
-            transform: translateX(0);
+            transition: opacity 1s linear;
+            animation: slide-up 1s ease;
+        }
+        
+        > app-movie:hover {
+            box-shadow: 0 0 10px;
+            opacity: 1;
+        }
+        
+        @keyframes slide-up {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 0.9;
+                transform: translateY(0);
+            }
         }
     }
+    
 }
