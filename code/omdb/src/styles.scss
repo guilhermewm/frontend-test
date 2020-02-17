@@ -1,5 +1,5 @@
-@import "./variables.scss";
-@import "./button.scss";
+@import "./app/shared/styles/button.scss";
+@import "./app/shared/styles/variables.scss";
 
 body {
     font-family: $roboto;

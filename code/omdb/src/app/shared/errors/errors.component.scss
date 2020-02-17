@@ -1,9 +1,10 @@
-@import '../../../variables.scss';
+@import '../styles/variables.scss';
 
 .error-component {
     max-width: 320px; 
     min-width: 300px;
     padding-top: $large;
+    margin: 0 auto;
 
     > div {
         > div {
