@@ -17,7 +17,7 @@ export class MoviesService {
     return this.http.get<MovieResponse>(`${this.API}&s=${title}&plot=full&page=${page}`).toPromise();       
   }
 
-  getMovieById(id: string): Promise<MovieResponse> {
-    return this.http.get<MovieResponse>(`${this.API}&i=${id}&plot=full`).toPromise();       
+  getMovieByImdbId(imdbID: string): Promise<Movie> {
+    return this.http.get<Movie>(`${this.API}&i=${imdbID}&plot=full`).toPromise();       
   }
 }
