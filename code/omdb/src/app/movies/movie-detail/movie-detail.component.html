@@ -1,0 +1,45 @@
+<section class="movie-detail-component">
+    <div class="back-button">
+        <button type="button" (click)="backPage()" class="btn-light">
+            <i class="fa fa-arrow-left"></i>
+            Back page
+        </button>
+    </div>
+    <div class="movie-detail">    
+        <div class="movie-infos">
+            <div class="movie-title">
+                <label class="title">{{movie.Title}} </label>
+                <label class="like" (click)="liked()"><i class="fa fa-heart"></i> {{likes}}</label> 
+            </div>
+            <div class="movie-plot">
+                Plot
+                <p>
+                    {{movie.Plot}}
+                </p>
+            </div>
+            <div class="movie-aditional-infos">
+                <div>
+                    <label>Cast</label>
+                    <ul>
+                        <li *ngFor="let cast of movie.Actors">{{cast}}</li>
+                    </ul>
+                </div>
+                <div class="genre">
+                    <label>Genre</label>
+                    <ul>
+                        <li *ngFor="let genre of movie.Genre">{{genre}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <label>Director</label>
+                    <ul>
+                        <li *ngFor="let director of movie.Director">{{director}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="movie-poster">
+            <img src="{{(movie.Poster === 'N/A' ? '../../../../../../assets/image-not-found.png' : movie.Poster)}}"/>
+        </div>
+    </div>
+</section>

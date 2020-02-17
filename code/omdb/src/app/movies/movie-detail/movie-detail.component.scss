@@ -1,0 +1,109 @@
+@import '../../shared/styles/variables.scss';
+
+.movie-detail-component {    
+    padding: 24px 40px 24px 40px;
+    animation: slide-up 2s ease;      
+
+    > .back-button {
+        width: 100%;
+    }
+
+    > .movie-detail{
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            padding-left: 20px;
+        }   
+    
+        > .movie-infos {
+            padding-right: 32px;        
+            min-width: 310px;
+            width: 100%;
+    
+            > .movie-title {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                > .title {                
+                    font-size: $text-bold;
+                    margin-bottom: $large;
+                }
+    
+                > .like {
+                    padding-left: $large;
+                    font-size: $text-medium;
+                    margin-bottom: $large;
+                    cursor: pointer;
+                }
+            }
+    
+            > .movie-plot {
+                font-size: $text-medium;
+                color: $color-grey;
+    
+                > p {
+                    font-size: $text-regular;
+                    color: $color-mid-grey;
+                    text-align: justify;
+                }
+            }
+    
+            > .movie-aditional-infos {
+                display: flex;
+                padding: $large 0px $large 0px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                > div {
+                    padding-bottom: $small;
+    
+                    > label {
+                        font-size: $text-medium;
+                        color: $color-grey;
+                    }
+    
+                    > ul {
+                        > li {
+                            font-size: $text-regular;
+                            color: $color-mid-grey;
+                        } 
+                    }
+                }
+    
+                > .genre {
+                    padding: 0px $large 0px $large;
+                }
+            }
+        }
+    
+        > .movie-poster {
+            width: 302px;
+    
+            > img {
+                border: solid 1px;
+            }
+        }     
+    
+        @media (max-width: 722px) {        
+            flex-wrap: wrap;
+        }
+    
+        @media (max-width: 463px) {        
+            .genre {
+                padding: 0px !important;
+            }
+        }
+    }    
+    
+    @keyframes slide-up {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }   
+}
